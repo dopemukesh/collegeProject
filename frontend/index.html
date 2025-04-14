@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login & Signup Form</title>
+  <title>College Project</title>
 
   <link rel="stylesheet" href="styles.css">
-  <script src="config.js"></script>
+  <script src="./src/config.js"></script>
 </head>
 
 <body>
@@ -56,27 +56,27 @@
     </form>
   </div>
 </body>
-<script src="toast.js"></script> <!-- Linking toast.js -->
-<script src="auth.js"></script>
+<script src="./src/toast.js"></script> <!-- Linking toast.js -->
+<script src="./src/auth.js"></script>
 
   <script>
-    function switchForm(formType) {
-      const loginForm = document.getElementById('loginForm');
-      const signupForm = document.getElementById('signupForm');
-      const tabs = document.querySelectorAll('.tab');
+    // function switchForm(formType) {
+    //   const loginForm = document.getElementById('loginForm');
+    //   const signupForm = document.getElementById('signupForm');
+    //   const tabs = document.querySelectorAll('.tab');
 
-      if (formType === 'login') {
-        loginForm.classList.add('active');
-        signupForm.classList.remove('active');
-        tabs[0].classList.add('active');
-        tabs[1].classList.remove('active');
-      } else {
-        loginForm.classList.remove('active');
-        signupForm.classList.add('active');
-        tabs[0].classList.remove('active');
-        tabs[1].classList.add('active');
-      }
-    }
+    //   if (formType === 'login') {
+    //     loginForm.classList.add('active');
+    //     signupForm.classList.remove('active');
+    //     tabs[0].classList.add('active');
+    //     tabs[1].classList.remove('active');
+    //   } else {
+    //     loginForm.classList.remove('active');
+    //     signupForm.classList.add('active');
+    //     tabs[0].classList.remove('active');
+    //     tabs[1].classList.add('active');
+    //   }
+    // }
   </script>
 
 </html>
