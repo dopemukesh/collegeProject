@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <script src="auth.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div>
+      Hi,
+      <b id="fullname">
+      </b>
+    </div>
+  </header>
+  <h1>Welcome to Home Page</h1>
+  <p>You have successfully logged in!</p>
+
+  <div>
+    <button onclick="logout()">Logout</button>
+  </div>
+</body>
+<script src="toast.js"></script> <!-- Linking toast.js -->
+<script>
+  window.onload = function () {
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    if (!user) return window.location.href = 'index.html';
+    document.getElementById('fullname').innerText = user.username.split(' ')[0];
+  };
+  function logout() {
+    localStorage.removeItem('currentUser');
+    window.location.href = 'index.html';
+    showToast('Logout successful', 'success');
+  }
+</script>
+
+</html>
